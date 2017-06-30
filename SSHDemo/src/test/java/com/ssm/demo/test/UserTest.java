@@ -17,20 +17,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * date: 2015/7/31
  * time: 11:55
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:conf/spring.xml","classpath:conf/spring-mybatis.xml"})
-public class UserTest {
+
+public class UserTest extends BaseTest{
 
     @Autowired
     private UserService userService;
 
-    /*@Before
-    public void before(){
-        @SuppressWarnings("resource")
-        ApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"classpath:conf/spring.xml"
-                ,"classpath:conf/spring-mybatis.xml"});
-        userService = (UserService) context.getBean("userServiceImpl");
-    }*/
 
     @Test
     public void addUser(){
