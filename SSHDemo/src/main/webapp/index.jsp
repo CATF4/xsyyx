@@ -25,18 +25,61 @@
         <img hidefocus="true" src="/resources/images/bd_logo2.png" height="129" width="270">
     </div>
     <div class="serch">
-        <form action="/start" method="post">
-            <input id="kw" name="wd" class="s_ipt" value="ge(add(var(x),mul(cons(2),var(y))),var(z))" maxlength="255" autocomplete="off"/>
-            <input id="denv" name="denv" class="s_ipt" value="[x->34, y->7, z->50]" maxlength="255" autocomplete="off"/>
+        <form action="/start" method="post" onsubmit="return form_check()">
+            <input id="kw" name="wd" class="s_ipt" placeholder="请输入表达式..." value="" maxlength="255" autocomplete="off"/>
+            <input id="denv" name="denv" class="s_ipt" placeholder="请输入动态环境..." value="" maxlength="255" autocomplete="off"/>
             <input id="mysubmit" type="submit" value="开始"/>
         </form>
     </div>
     <div class = "footer">
-        <p>形式语义学 第二次作业汇报</p>
-        <p>2017年7月@汇报人：欧阳猛</p>
+        <p>形式语义学 测试 ：<span onclick="test1()">用例1、</span><span onclick="test2()">用例2、</span><span onclick="test3()">用例3、</span><span onclick="qk()">清空</span></p>
+        <p>2017年7月 第二次作业汇报@汇报人：欧阳猛</p>
     </div>
 
 </div>
 </body>
 
+<script>
+
+    function test1() {
+        var exp1 = document.getElementById("kw");
+        exp1.value = "mul(cons(3),var(x))";
+
+        var denv1 = document.getElementById("denv");
+        denv1.value = "[x->11]";
+    }
+    function test2() {
+        var exp1 = document.getElementById("kw");
+        exp1.value = "add(var(x),mul(var(y),var(z)))";
+
+        var denv1 = document.getElementById("denv");
+        denv1.value = "[x->1, y->2, z->3]";
+    }
+    function test3() {
+        var exp1 = document.getElementById("kw");
+        exp1.value = "ge(add(var(x),mul(cons(2),var(y))),var(z))";
+
+        var denv1 = document.getElementById("denv");
+        denv1.value = "[x->34, y->7, z->50]";
+    }
+
+    function qk() {
+        var exp1 = document.getElementById("kw");
+        exp1.value = "";
+
+        var denv1 = document.getElementById("denv");
+        denv1.value = "";
+    }
+    function form_check() {
+        var exp=document.getElementById("kw").value;
+        var denv=document.getElementById("denv").value;
+        if(exp.trim()==""||denv.trim()==""){
+            alert("输入不能为空！请按确认继续操作..");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>
 </html>
