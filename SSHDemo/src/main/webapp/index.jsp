@@ -25,9 +25,10 @@
         <img hidefocus="true" src="/resources/images/bd_logo2.png" height="129" width="270">
     </div>
     <div class="serch">
-        <form action="/user/index" method="post">
-            <input id="kw" name="wd" class="s_ipt" value="" maxlength="255" autocomplete="off"/>
-            <input id="mysubmit" type="submit" value="输入表达式"/>
+        <form action="/start" method="post">
+            <input id="kw" name="wd" class="s_ipt" value="ge(add(var(x),mul(cons(2),var(y))),var(z))" maxlength="255" autocomplete="off"/>
+            <input id="denv" name="denv" class="s_ipt" value="[x->34, y->7, z->50]" maxlength="255" autocomplete="off"/>
+            <input id="mysubmit" type="submit" value="开始"/>
         </form>
     </div>
     <div class = "footer">

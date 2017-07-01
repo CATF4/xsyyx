@@ -53,6 +53,17 @@ a.mnav{
     border-color: #999;
     font-size:16px;
 }
+#denv{
+    width: 240px;
+    height: 36px;
+    border: 1px;
+    border-style: solid;
+    background: transparent;
+    padding: 0px;
+    padding-left: 4px;
+    border-color: #999;
+    font-size:16px;
+}
 #mysubmit{
     height: 36px;
     width: 100px;
