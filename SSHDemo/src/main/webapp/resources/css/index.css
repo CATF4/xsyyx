@@ -22,9 +22,8 @@ a.mnav{
     font-weight:700;
     line-height:24px;
     margin-left:20px;
-    font-size:13px;
-    text-decoration:underline
-
+    font-size:18px;
+    text-decoration:none;
 }
 #more{
     padding-left: 2px;
@@ -45,6 +44,17 @@ a.mnav{
 }
 #kw{
     width: 540px;
+    height: 36px;
+    border: 1px;
+    border-style: solid;
+    background: transparent;
+    padding: 0px;
+    padding-left: 4px;
+    border-color: #999;
+    font-size:16px;
+}
+#denv{
+    width: 240px;
     height: 36px;
     border: 1px;
     border-style: solid;
@@ -77,12 +87,12 @@ a.mnav{
     color: #666;
 }
 .footer a{
-    font-size: 16px;
+    font-size: 18px;
     padding: 5px;
     color: #666;
 }
 .footer p{
-    font-size: 16px;
+    font-size: 18px;
     color: #666;
     margin-top: 10px;
 }
